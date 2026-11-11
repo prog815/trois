@@ -733,6 +733,12 @@
 
     // Детали
     var details = [];
+    
+    // Правообладатель (добавлено!)
+    if (r.name) {
+        details.push('<div><span class="lbl">Правообладатель:</span> <span class="val">' + highlight(r.name, queryTokens) + '</span></div>');
+    }
+
     if (r.regnom) details.push('<div><span class="lbl">Рег. номер:</span> <span class="val">' + highlight(r.regnom, queryTokens) + '</span></div>');
     if (r.npravo) details.push('<div><span class="lbl">Номер правовой охраны:</span> <span class="val">' + highlight(r.npravo, queryTokens) + '</span></div>');
     if (r.dpravo) details.push('<div><span class="lbl">Дата правовой охраны:</span> <span class="val">' + highlight(r.dpravo, queryTokens) + '</span></div>');
